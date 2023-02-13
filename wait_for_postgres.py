@@ -8,7 +8,7 @@ interval_unit = "second" if check_interval == 1 else "seconds"
 config = {
     "dbname": os.getenv("POSTGRES_DB", "postgres"),
     "user": os.getenv("POSTGRES_USER", "postgres"),
-    "password": os.getenv("POSTGRES_PASSWORD", ""),
+    "password": os.getenv("POSTGRES_PASSWORD", "postgres"),
     "host": os.getenv("DATABASE_URL", "postgres")
 }
 
@@ -22,6 +22,7 @@ def pg_isready(host, user, password, dbname):
     while time() - start_time < check_timeout:
         try:
             conn = psycopg2.connect(**vars())
+            logger.info(f"{host}, {user}, {password}, {dbname}")
             logger.info("Postgres is ready! ✨ 💅")
             conn.close()
             return True

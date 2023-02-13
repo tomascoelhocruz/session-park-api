@@ -7,7 +7,7 @@ session api. Check out the project's [documentation](http://tomascoelhocruz.gith
 
 # Prerequisites
 
-- [Docker](https://docs.docker.com/docker-for-mac/install/)  
+- [Docker](https://docs.docker.com/docker-for-mac/install/)
 
 # Local Development
 
@@ -21,8 +21,3 @@ Run a command inside the docker container:
 ```bash
 docker-compose run --rm web [command]
 ```
-# session-park-api
-# session-park-api
-# session-park-api
-# session-park-api
-# session-park-api
